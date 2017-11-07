@@ -1,0 +1,49 @@
+
+
+
+#the-about-page {
+ position: relative;
+}
+
+
+
+.heade-image {
+  /* position: absolute; */
+ 
+}
+#the-about-page.we-story-tell {
+  position: absolute;
+}
+.image-about-shift-left {
+  position: absolute;
+  right: 50px;
+  z-index: 999;
+  
+}
+
+.style-black-dots-about {
+  position: absolute; 
+}
+
+.image-overlay-yellow-box{
+  position: relative;
+  height: 200px;
+}
+.image-overlay-yellow-box .the-yellow-rectangle{
+  height: 140px;
+  width: 90%;
+  bottom: -10px;
+  top:auto;
+}
+
+
+
+.my-test::before {
+  display: inline-block;
+  content:"-";
+  width: 30px;
+}
+/*services*/
+
+
+		
