@@ -106,6 +106,20 @@ jQuery('.view > div').removeClass('visible');
 jQuery('.view > div').eq(jQuery(this).index()).addClass('visible');
 
 });
+// replace 2 with 2.Personal Information & replace 1 with 1.event details
+jQuery(document).ready(function( $ ) {
+  $( ".second-button" ).click(function() {
+    $( this ).html('2.personal info');
+    $(this).prev().html('1');
+  }); 
+  $( ".first-button" ).click(function() {
+    $( this ).html('1.event details');
+    $(this).next().html('2');
+  });
+  
+
+
+});
 
 // Get & Use Values Function
 jQuery(document).ready(function( $ ) {

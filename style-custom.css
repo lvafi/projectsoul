@@ -210,8 +210,8 @@
   content: "min";
 }
 
+.visible.button-selected-styling {background-color: #fdee00;border-radius: 0px;}
 
-/* Form */
 
 
 
@@ -866,6 +866,7 @@ margin: 0 !important;
   }
   .custom-MOBILE {display: none;}
   .custom-DESKTOP{display: block;}
+  .header-container{display: none;}
 
 
 
