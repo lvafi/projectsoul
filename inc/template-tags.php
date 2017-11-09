@@ -100,3 +100,96 @@ if ( ! function_exists( 'projectsoul_entry_footer' ) ) :
 		);
 	}
 endif;
+
+
+
+
+// Tribe Calendar
+if ( class_exists( 'Tribe__Events__Main' ) ) {
+	
+			// Custom Next Month
+			function custom_events_the_next_month_link() {
+					$html = '';
+					$url  = tribe_get_next_month_link();
+					$text = tribe_get_next_month_text();
+					$text = substr($text,0,3);
+	
+					// Check if $url is populated (an empty string may indicate the date was out-of-bounds, ie on 32bit servers)
+					if ( ! empty( $url ) ) {
+							$date = Tribe__Events__Main::instance()->nextMonth( tribe_get_month_view_date() );
+							if ( $date <= tribe_events_latest_date( Tribe__Date_Utils::DBYEARMONTHTIMEFORMAT ) ) {
+									$html = '<a data-month="' . $date . '" href="' . esc_url( $url ) . '" rel="next">' . $text . '</a>';
+							}
+					}
+	
+					echo apply_filters( 'custom_events_the_next_month_link', $html );
+			}
+	
+			// Custom Next Next Month
+			function custom_events_the_next_next_month_link() {
+					$html = '';
+					$url  = tribe_get_next_month_link();
+					$text = tribe_get_next_month_text();
+					$text = substr($text,0,3);
+	
+					// Check if $url is populated (an empty string may indicate the date was out-of-bounds, ie on 32bit servers)
+					if ( ! empty( $url ) ) {
+							$date = Tribe__Events__Main::instance()->nextMonth( tribe_get_month_view_date() );
+							if ( $date <= tribe_events_latest_date( Tribe__Date_Utils::DBYEARMONTHTIMEFORMAT ) ) {
+									$html = '<a data-month="' . $date . '" href="' . esc_url( $url ) . '" rel="next">' . $text . '</a>';
+							}
+					}
+	
+					echo apply_filters( 'custom_events_the_next_next_month_link', $html );
+			}
+	
+			// Custom Next Month URL
+			function custom_events_the_next_month_url() {
+					$html = '';
+					$url  = tribe_get_next_month_link();
+	
+					// Check if $url is populated (an empty string may indicate the date was out-of-bounds, ie on 32bit servers)
+					if ( ! empty( $url ) ) {
+							$date = Tribe__Events__Main::instance()->nextMonth( tribe_get_month_view_date() );
+							if ( $date <= tribe_events_latest_date( Tribe__Date_Utils::DBYEARMONTHTIMEFORMAT ) ) {
+									$html = esc_url( $url );
+							}
+					}
+	
+					echo apply_filters( 'custom_events_the_next_month_url', $html );
+			}
+	
+			
+	
+			// Custom Previous Month URL
+			function custom_events_the_previous_month_url() {
+					$html = '';
+					$url  = tribe_get_previous_month_link();
+					$date = Tribe__Events__Main::instance()->previousMonth( tribe_get_month_view_date() );
+					$earliest_event_date = tribe_events_earliest_date( Tribe__Date_Utils::DBYEARMONTHTIMEFORMAT );
+	
+					// Only form the link if a) we have a known earliest event date and b) the previous month date is the same or later
+					if ( $earliest_event_date && $date >= $earliest_event_date ) {
+							$text = tribe_get_previous_month_text();
+							$html = esc_url( $url );
+					}
+	
+					echo apply_filters( 'custom_events_the_previous_month_url', $html );
+			}
+	
+			function custom_get_next_next_month_link() {
+					global $wp_query;
+					
+					$current_date = $wp_query->query['eventDate'];
+					$current_date = $current_date . '-01';
+					$dateObj = new DateTime($current_date);
+					$newDate = $dateObj->add(new DateInterval('P02M'));
+					$newDate = $newDate->format('Y-m'); 
+					
+					$output = get_home_url() . '/events/' . $newDate . '/';
+	
+					return apply_filters( 'custom_get_next_next_month_link', $output );
+			}
+	
+	
+	} // Tribe Calendar

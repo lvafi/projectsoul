@@ -23,14 +23,11 @@ get_header(); ?>
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <section class="theme-dark">
+                <section>
                         <div class="l-container" id="the-about-page">
 
+                             <h1><?php the_field('title_'); ?></h1>
                                 
-                                
-                                <div class="hr-line-black-about">
-                                    <h1><?php the_field('title_'); ?></h1>
-                                </div>
                         </div>         
                 </section>
                 <section class="theme-light">

@@ -9,6 +9,8 @@ var controls = "#yellow-slider-controls";
 
 
 
+
+
 function get_window_size (){
   var window_width = jQuery(window).width();
   return window_width;
@@ -31,7 +33,7 @@ function slider_init () {
     });
     jQuery('.yellow-slider').slick({
       appendArrows: controls,
-      prevArrow: '<button type="button" class="slick-prev"><span class="control-icon fa-chevron-left fa-lg"></span><span class="control-previous">PRVE</span></button>',
+      prevArrow: '<button type="button" class="slick-prev"><span class="control-icon fa-chevron-left fa-lg"></span><span class="control-previous">PREV</span></button>',
       nextArrow: '<button type="button" class="slick-next"><span class="control-next">NEXT</span><span class="control-icon fa-chevron-right fa-lg"></span></button>'
     });
 
@@ -104,6 +106,36 @@ jQuery('.view > div').removeClass('visible');
 jQuery('.view > div').eq(jQuery(this).index()).addClass('visible');
 
 });
+
+// Get & Use Values Function
+jQuery(document).ready(function( $ ) {
+     function apply_values() {
+  
+                  // Get Values
+                  var charity = $('.charity .selected').html(),
+                      dancers = $('.dancers .selected').html();
+
+                  // Use Values
+                  console.log(charity);
+                  console.log(dancers);
+                  $('input[name="charity"]').html(charity);
+
+              }
+
+              // Get Default Values on Page Load
+              apply_values();
+
+              // Selection Toggle
+              $('.view button').click(function() {
+                  var option = $(this).parent().attr('class');
+                  $('.' + option + ' button').removeClass('selected');
+                  $(this).addClass('selected');
+                  apply_values();
+              });
+});
+
+
+
 
 
 //full screen video
