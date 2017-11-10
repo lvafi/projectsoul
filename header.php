@@ -48,7 +48,7 @@
 			<div class="desktop-animation">
 					<object id="svg" type="image/svg+xml" data="<?php echo get_stylesheet_directory_uri(); ?>/image/nav.svg">Your browser does not support SVGs</object>
 					
-			</div>
+			</div> 
 				
 						<div class="header-container">
 								<?php $about_page = get_page_by_title( 'about us');?>
