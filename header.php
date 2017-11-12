@@ -54,6 +54,7 @@
 								<?php $about_page = get_page_by_title( 'about us');?>
 								<div class="heade-image"><img src="<?php the_field('about-image',$about_page); ?>"/></div>
 								<div class="mobile-header"><img width="300" src="<?php echo get_stylesheet_directory_uri(); ?>/image/PSP_logo-mobile-08.svg" width="65%" height="80"></div>
+								
 								<span id="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 				  	</div>
 		  	

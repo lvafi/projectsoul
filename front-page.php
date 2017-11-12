@@ -22,7 +22,7 @@ get_header(); ?>
 
             <?php while ( have_posts() ) : the_post(); ?>
 
-                <section class="theme-dark padding-omit">
+                <section class="padding-omit">
               
                     <div class="l-container" id="intro">
 
@@ -93,7 +93,7 @@ get_header(); ?>
                                 
                                 
                             </div>
-                        <div class="style-white-dots"><img src="<?php echo get_stylesheet_directory_uri(); ?>/image/PSP_White_Dots-01.svg" width="70%" height="80"></div>    
+                        <div class="style-white-dots"><img src="<?php echo get_stylesheet_directory_uri(); ?>/image/PSP_White_Dots-01.svg" width="70%" height="80"></div>   
                                 
                             
                         
@@ -119,18 +119,18 @@ get_header(); ?>
                                             <div class=flex-slick-slider-header-positioning>
 
                                                 <div class="upcoming-events">upcoming events</div>
-                                                <div class="event-dates"><?php echo tribe_get_start_date( $event ); ?></div>
+                                                <div class="event-dates"><?php echo tribe_get_start_date( $event, false); ?></div>
 
                                             </div>
                                             <div class="img-overlay">
                                             <div class="m-overlay">&nbsp;</div>
                                             <?php echo get_the_post_thumbnail($event); ?>
                                             </div> 
+                                            <div class="address-city-padding">
+                                                <p><span><?php echo( $event->post_title );?></span><br>
 
-                                            <p><?php echo( $event->post_title );?></p>
-
-                                            <p><?php echo tribe_get_address($event). " " .tribe_get_city($event); ?></p>
-
+                                                <?php echo tribe_get_address($event). " " .tribe_get_city($event); ?></p>
+                                            </div>
                                         </div>
                                 
 
@@ -217,7 +217,7 @@ get_header(); ?>
 
                         <div class="fit-the-page">
 
-                            <div class="the-yellow-rectangle"></div>
+                            <div class="the-yellow-rectangle-tell-ur-story rellax" data-rellax-speed="-2"></div>
 
                             <img src="<?php the_field('contact_us_image'); ?>"/>
                             

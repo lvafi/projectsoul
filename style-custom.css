@@ -210,8 +210,10 @@
   content: "min";
 }
 
-.visible.button-selected-styling {background-color: #fdee00;border-radius: 0px;}
-
+.second-button{background-color: #fdee00;width:80px; height:50px;border: none;}
+.first-button{height: 50px; width: 240px;background-color: white;}
+.close-btn {width: 80px;background-color: #fdee00}
+.open-btn {width: 240px;background-color: white;}
 
 
 
@@ -276,7 +278,26 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .view > div.visible{
   display: block;
 }
+/**/
+#slider {
+  width: 200px;
+}
 
+#custom-handle {
+  width: 20px;
+  height: 1.6em;
+  top: 50%;
+  margin-top: -.8em;
+  text-align: center;
+  line-height: 5.6em;
+  border-radius: 20px;
+
+}
+
+.ui-state-active {
+  color: #000 !important;
+  outline: none;
+}
 
 
 /* slider slick*/
@@ -485,8 +506,8 @@ top:1730px;}
 .hidden{display: none;}
 .controller .button-first { display: none;}
 .controller .button-second {display: none;}
-
-
+.dotted-link > a > span {border-bottom: dotted; color: white;}
+.dotted-link > span {border-bottom: dotted; color: white;}
 /* Tribe Events*/
 .tribe-events-content > h1 {text-transform: uppercase;}
 
@@ -588,13 +609,14 @@ margin: 0 !important;
     font-size: larger;
     font-weight: bold;
     position: absolute;
-    top: 700px;
+    top: 640px;
     left: 0px;
     z-index: 999;
   }
   .uppercase > p {
     margin-bottom: 0;
-    margin-top: 100px;
+    margin-top: -300px;
+    color: white;
   }
   .uppercase {
     text-transform: uppercase;
@@ -615,18 +637,18 @@ margin: 0 !important;
     height: 250px;
     width: 70%;
     background-color: #fdee00;
-    top: 460px;
+    top: 10px;
     opacity: 0.7;
     left:0px;
     z-index: 99;
   }
-  .title-we-story-tell{font-size: 60px;}
+  .title-we-story-tell{font-size: 50px;text-transform: uppercase;}
   .small-yellow-rectangle{
     position: absolute;
     height: 20px;
     width: 140px;
     background-color: #fdee00;
-    bottom: -30px;
+    bottom: -58px;
     opacity: 0.7;
   }
   .style-white-dots{ position: relative; bottom: -100px;}
@@ -649,8 +671,26 @@ margin: 0 !important;
   /* .title-services {position: fixed; top:0; height: 100px; width: 100%;} */
   /* .title-services > h1 {position: absolute;}
   .test-container { padding-top: 100px;} */
+  .charity {display: flex;justify-content: flex-start;}
+  .charity > button {margin-right: 20px;}
+  .dancers {display: flex; justify-content: flex-start;}
+  .dancers > button {margin-right: 20px;}
+  #site-navigation .heade-image {margin-top: 200px;}
+  .white-link > p {color: white;}
+  .m-overlap .hr-line-black {top:210px; left: 140px;}
+  .text-beside-line{top:1433px;}
+  .text-beside-line-break{top:1465px;}
+  .m-overlap {margin-bottom: 50px;}
+  .link-styling a {top: 70px;left: -210px;position: relative;color:black;}
+  .the-yellow-rectangle-tell-ur-story{position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: #fdee00;
+    top: -760px;
+    opacity: 0.7;
+    left: 0px;
+    z-index: 99;}
 
-  
 
     
 }
@@ -693,16 +733,18 @@ margin: 0 !important;
   }
   .uppercase > p{
     position: absolute;
-    top:-200px;
+    top:185px;
     font-size: 60px;
     left: 60px;
+    color: white;
   }
   .white-link > p {
     position: relative;
-    top: -38px;
+    top: -20px;
     left: 210px;
     padding-right: 140px;
     margin-right: 10px;
+    color: white;
 
   }
   .m-overlap > img {
@@ -738,12 +780,41 @@ margin: 0 !important;
 
 
 
-.heade-image{display: none;}
-  
+ .heade-image{display: none;}
+ 
+ .style-white-dots{position: relative;left: -300px; bottom: -153px;}
+ #yellow-slider-controls {position: relative; top:60px;}
+  .control-next{left:490px;font-weight: 600; font-size: 20px;}
+  .fa-chevron-right{position: relative;left: 555px;bottom:5px;}
+  .fa-chevron-left {position: relative; left:40px;bottom: -15px;}
+  .upcoming-events{margin-bottom: 30px;position: relative;left: 45px; text-transform: uppercase;}
+  .control-previous {left:70px;font-weight: 600;font-size: 20px;}
+  .img-overlay {width:500px; left: 50px;}
+  .event-dates{position: relative;right: 45px;}
+  .address-city-padding >p {position: relative; left: 47px;font-size: 19px;font-weight: 600;}
+  .address-city-padding > span {text-transform: uppercase;}
+
+  .my-style.l-container{margin-top:80px;}
+  .our-style-for-page-title{font-size: 50px;top:65px;}
+  .link-styling > p {font-size: 70px;top:-470px;right:-650px;position: relative;}
+  .fit-the-page {left: -322px;}
+  .link-styling a{position: relative;
+    left: -320px;
+    bottom: -60px;}
+  .the-yellow-rectangle-tell-ur-story  {position: absolute;
+    height: 200px;
+    width: 106%;
+    background-color: #fdee00;
+    top: -1500px;
+    opacity: 0.7;
+    left: 0px;
+    z-index: 99;}
+
   /* we tell story through dance section positioning -------------------*/
   .title-line-keep-beside{position: relative;}
   .learn-more-link a {
     top: 180px;
+    color: black;
   }  
   
   .title-we-story-tell {
@@ -758,7 +829,7 @@ margin: 0 !important;
   .m-overlap{margin-bottom: 310px;}
   .small-yellow-rectangle {
     width: 130px;
-    top: 695px;
+    top: 720px;
     left: 70px;
   }
   .m-overlap .hr-line-black {
@@ -787,8 +858,8 @@ margin: 0 !important;
   .hide-slider-on-desktop {
     display: block;position: relative;
     top: 100px;
-    width: 1500px;
-    left: -400px;
+    width: 1180px;
+    left: -250px;
   }
 
   .text-beside-line{font-size: 22px;top:89px;left:210px;}
@@ -803,15 +874,16 @@ margin: 0 !important;
 
   .style-black-dots > img{
     position: relative;
-    top: -68px;
-    right: -580px;}
+    top: -110px;
+    right: -630px;
+    width: 350px;}
 
    
   /*.our-style-slick-slider-desktop{display: block;} */
   .swiper-container{height: 500px;}
 
   
-  .yellow-small-box {top:530px;}
+  .yellow-small-box {top:200px; left:790px;}
   .footer-container{display: flex; justify-content: space-between;flex-wrap: wrap;justify-content: center;}
   .box-1{width: 50%;}
   .box-2{width: 50%;}
@@ -824,7 +896,7 @@ margin: 0 !important;
   /*yello-container for desktop*/
   .slider-for{display: block;}
   .yellow-block .l-container{max-width: 100%; display: flex;padding-top: 0;height:800px;}
-  .yellow-slider {width: 600px;margin: auto;}
+  .yellow-slider {width: 600px;margin: auto; padding-top:100px;}
   .slick-track > img{ height: 800px;object-fit: cover;}
   /*swiper*/
  .swiper-container {

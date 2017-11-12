@@ -34,7 +34,9 @@ function projectsoul_secondary_scripts() {
     
     //rellax
     wp_enqueue_script( 'projectsoul-rellax-js', get_template_directory_uri() . '/js/rellax/rellax.min.js', array('jquery'), '1.0.0', true );
-    
+    //
+    //wp_enqueue_style( 'jquery-ui', get_template_directory_uri() . '/js/jquery-ui-1.12.1.custom/jquery-ui.min.js'  );
+    //wp_enqueue_style( 'ui-css', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' );
 }
 add_action( 'wp_enqueue_scripts', 'projectsoul_secondary_scripts' );
 ?>

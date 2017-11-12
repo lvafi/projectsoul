@@ -60,7 +60,7 @@ function slider_init () {
       asNavFor: '.slider-for',
       focusOnSelect: true,
       appendArrows: controls,
-      prevArrow: '<button type="button" class="slick-prev"><span class="control-icon fa-chevron-left fa-lg"></span><span class="control-previous">PRVE</span></button>',
+      prevArrow: '<button type="button" class="slick-prev"><span class="control-icon fa-chevron-left fa-lg"></span><span class="control-previous">PREV</span></button>',
       nextArrow: '<button type="button" class="slick-next"><span class="control-next">NEXT</span><span class="control-icon fa-chevron-right fa-lg"></span></button>'
     });
 
@@ -109,12 +109,12 @@ jQuery('.view > div').eq(jQuery(this).index()).addClass('visible');
 // replace 2 with 2.Personal Information & replace 1 with 1.event details
 jQuery(document).ready(function( $ ) {
   $( ".second-button" ).click(function() {
-    $( this ).html('2.personal info');
-    $(this).prev().html('1');
+    $( this ).html('2.personal info').addClass('open-btn');
+    $(this).prev().html('1').addClass('close-btn');
   }); 
   $( ".first-button" ).click(function() {
-    $( this ).html('1.event details');
-    $(this).next().html('2');
+    $( this ).html('1.event details').removeClass('close-btn');
+    $(this).next().html('2').removeClass('open-btn');
   });
   
 
@@ -146,6 +146,23 @@ jQuery(document).ready(function( $ ) {
                   $(this).addClass('selected');
                   apply_values();
               });
+              //
+              
+                // var handle = $( "#custom-handle" );
+                // $( "#slider" ).slider({
+                //     range: "max",
+                //       min: 3,
+                //       max: 15,
+                //       value: 10,
+                //   create: function() {
+                //     handle.text( $( this ).slider( "value" ) );
+                //   },
+                //   slide: function( event, ui ) {
+                //     handle.text( ui.value );
+                //   }
+                // });
+              
+              
 });
 
 
@@ -181,7 +198,7 @@ jQuery(document).ready(function( $ ) {
 var rellax = new Rellax('.rellax', {
   callback: function(position) {
     // callback every position change
-    console.log(position);
+    // console.log(position);
   }
 });
 });

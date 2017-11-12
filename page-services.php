@@ -22,11 +22,11 @@ get_header(); ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     
                 <?php $home_page = get_page_by_title( 'home' );?>
-                    <section class="theme-dark">
+                    <section>
                         <div class="l-container" id="intro">
                             <article class="content-1">
                                 <?php $home_page = get_page_by_title( 'home' ); ?>
-                                <div><h1 class="uppercase fade-in one"><?php the_field('reflections_of_motion', $home_page); ?> </h1></div>
+                                <div class="uppercase fade-in one"><h1><?php the_field('reflections_of_motion', $home_page); ?> </h1></div>
                                 <div class="fade-in one intro-content-services"><?php $mycontent = $home_page->post_content; echo $mycontent;?> </div>
                             </article>
                         </div>
