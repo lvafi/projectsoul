@@ -604,5 +604,5 @@
 <a href="http://google.ca" target="_parent"><rect id="calendar-link" x="440" y="398.5" fill="transparent" width="169.5" height="16"/></a>
 <a href="http://localhost:8888/projectsoul/about/" target="_parent"><rect id="about-link" x="309.5" y="419" fill="transparent" width="101" height="15"/></a>
 
-<a href="http://google.ca" target="_parent"><rect id="home-link" x="20" y="380" fill="transparent" width="169.5" height="30"/></a>
+<a href="http://localhost:8888/projectsoul/home/" target="_parent"><rect id="home-link" x="20" y="380" fill="transparent" width="169.5" height="30"/></a>
 </svg>

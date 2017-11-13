@@ -691,6 +691,17 @@ margin: 0 !important;
     left: 0px;
     z-index: 99;}
 
+ /*about us mobile*/
+ .page-id-2 #site-navigation .heade-image{margin-top: 0px;}
+ .white-line-about-us{background-color: white;width: 50px; height: 5px;position: relative; top: -400px;left: 90px;}
+ .black-line-about-us{background-color: black; height: 5px; width: 80px;position: relative; top:39px;}
+  .about-us{position: relative; left: 100px; text-transform: uppercase;font-size: 25px;}
+  .black-line-about-us-container{margin-top: -50px;}
+  #the-about-page .the-yellow-rectangle{position: absolute;height: 220px;width: 70%;background-color: #fdee00;top: -220px;opacity: 0.7;left:15px;}
+  .the-yellow-rectangle-backof-image{position: absolute;height: 220px;width: 70%;background-color: #fdee00;top: 550px;opacity: 0.7;right:10px;}
+  .image-about-shift-left{left: -35px;}
+  .c {margin-top: 30px;}
+  .our-team{position: relative;top:-10px;left: 90px;}
 
     
 }

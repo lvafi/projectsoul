@@ -27,21 +27,23 @@ get_header(); ?>
                         <div class="l-container" id="the-about-page">
 
                              <h1><?php the_field('title_'); ?></h1>
+                             <div class="white-line-about-us"><hr></div>
+                             <div class="the-yellow-rectangle rellax" data-rellax-speed="-2"></div>
                                 
                         </div>         
                 </section>
                 <section class="theme-light">
                         <div class="l-container" id="about-us-overlap">
-                                <div class="">
-                                        <div class=""><hr></div>
-                                        <h1><?php the_title(); ?></h1>
+                                <div class="black-line-about-us-container">
+                                        <div class="black-line-about-us"><hr></div>
+                                        <h1 class="about-us"><?php the_title(); ?></h1>
                                 </div>        
                                 <div class="image-overlay-yellow-box">
                                         <div class="image-about-shift-left"> <?php echo get_the_post_thumbnail(); ?></div>
-                                        <div class="the-yellow-rectangle"></div>
+                                        
                                 </div>
                                 <div class="c"><?php the_field('about_us_full_content'); ?></div>
-                                
+                                <div class="the-yellow-rectangle-backof-image rellax" data-rellax-speed="-2"></div>
                         </div>        
                                
                 </section>
@@ -50,8 +52,8 @@ get_header(); ?>
                 <section class="theme-light">
                     <div class="l-container">
                         <div class="hr-line-black-test">
-                            
-                            <h1 class="my-test">our team</h1>
+                            <div class="black-line-about-us"><hr></div>
+                            <h1 class="our-team">our team</h1>
                         </div>
                         
                         <div class="our-style-slick-slider">
