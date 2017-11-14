@@ -16,10 +16,18 @@
 	<footer id="colophon" class="site-footer">
 		
 
-		<section class="theme-dark">
+		<!-- <section class="theme-dark">
 				<div class="l-container">
 						<?php echo do_shortcode( '[contact-form-7 id="86" title="Contact form 1"]' );  ?>	
 				</div>			
+		</section> -->
+
+		<section class="theme-dark" id="contact-form">
+		   <div class="controller">
+				 <button class="first-button">1. EVENT DETAILS</button> 
+				 <button class="second-button">2</button>
+				</div>
+		   <?php echo do_shortcode( '[contact-form-7 id="86" title="Contact form 1"]' );  ?>
 		</section>
 		
 		<section class="theme-dark">

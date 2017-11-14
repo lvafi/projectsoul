@@ -508,6 +508,35 @@ top:1730px;}
 .controller .button-second {display: none;}
 .dotted-link > a > span {border-bottom: dotted; color: white;}
 .dotted-link > span {border-bottom: dotted; color: white;}
+
+#contact-form { 
+  position: fixed;
+  background-color: black;
+  color:white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 15px 15px 0px 15px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  visibility: hidden;
+  z-index: 100000;
+
+}
+#contact-form.state-active{
+ visibility: visible;
+ opacity: 1;
+ pointer-events: auto;
+
+}
+
+
+
+
 /* Tribe Events*/
 .tribe-events-content > h1 {text-transform: uppercase;}
 
@@ -585,6 +614,45 @@ margin: 0 !important;
     height: 50px ;
   }
 
+}
+
+
+/* Range Slider */
+.slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.view .ui-slider-horizontal {
+  height: 10px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10'><circle cx='5' cy='5' r='5' stroke='black' stroke-width='6' fill='#fdee00'/></svg>") repeat-x;
+  border: none !important;
+}
+
+.view .ui-slider .ui-slider-handle {
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin-top: -10px;
+  text-align: center;
+  line-height: 5.0em;
+  border-radius: 50%;
+  background-color: #fdee00;
+  border: none;
+}
+
+.ui-state-active,
+.ui-state-default {
+  color: #fff !important;
+  outline: none;
+}
+
+.limits {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 

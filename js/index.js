@@ -202,3 +202,67 @@ var rellax = new Rellax('.rellax', {
   }
 });
 });
+
+
+
+// Range Slider
+jQuery(document).ready(function($) {
+  
+  
+    // Performance Time
+    (function() {
+  
+      var performanceTime = $( "#performance-time .ui-slider-handle" );
+  
+      $( "#performance-time" ).slider({
+        value: 10,
+        min: 3,
+        max: 15,
+        create: function() {
+          performanceTime.text( $( this ).slider( "value" ) + "\u00A0mins" );
+        },
+        slide: function( event, ui ) {
+          performanceTime.text( ui.value + "\u00A0mins" );
+          var time = performanceTime.html();
+          $('input[name="time"').html(time);
+        }
+      });
+  
+      var time = performanceTime.html();
+      $('input[name="time"').html(time);
+    
+    })(); // end Performance Time
+    
+  
+  // Performance Budget
+  (function() {
+  
+    var performanceBudget = $( "#performance-budget .ui-slider-handle" );
+  
+      $( "#performance-budget" ).slider({
+        value: 1000,
+        min: 0,
+        max: 10000,
+        step: 100,
+        create: function() {
+          performanceBudget.text( "$" + $( this ).slider( "value" ) );
+        },
+        slide: function( event, ui ) {
+          performanceBudget.text( "$" + ui.value );
+          var budget = performanceBudget.html();
+          $('input[name="budget"').html(budget);
+        }
+      });
+  
+      var budget = performanceBudget.html();
+      $('input[name="budget"').html(budget);
+  
+  })(); // end Performance Budget
+    // pop up window
+    $('#open').on('click',function(e){
+      e.preventDefault();
+      $('#contact-form').addClass('state-active');
+    })  
+  
+  }); // end document ready
+  
