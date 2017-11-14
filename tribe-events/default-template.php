@@ -49,18 +49,25 @@ $events = get_posts($args);
 ?>
 
 <section>
-  <p class="title">Upcoming Workshops</p>
-  <?php foreach($events as $event): ?>
-    <div class="workshop-cont not-in-slider">
-      <picture style="background-image: url(<?php echo get_the_post_thumbnail_url($event->ID); ?>)"></picture>
-      <article class="padded-text">
-        <p class="title"><?php echo tribe_events_event_schedule_details( $event->ID, '<p class="title">', '</p>' ); ?></p>
-        <h3><?php echo $event->post_title ?></h3>
-        <p><?php echo substr($event->post_content, 0, 200); ?>...</p>
-        <a class="no-underline" href="<?php echo get_permalink($event->ID); ?>"><button>Read More</button></a>
-      </article>
-    </div>
-  <?php endforeach ?>
+  <div class="comingEventTitle">
+    <div class="dash"></div>
+    <p>UPCOMING EVENTS</p>
+  </div>
+  <div class="events">
+    <?php foreach($events as $event): ?>
+      <div class="workshop-cont not-in-slider">
+        <!-- <picture class="event-image" style="background-image: url(<?php echo get_the_post_thumbnail_url($event->ID); ?>)"></picture> -->
+        <img src="<?php echo get_the_post_thumbnail_url($event->ID); ?>" alt="">
+        <article class="padded-text">
+          <h1><?php echo $event->post_title ?></h1>
+          <p class="event-title"><?php echo tribe_events_event_schedule_details( $event->ID, '<p class="title">', '</p>' ); ?></p>
+          
+          <p><?php echo substr($event->post_content, 0, 200); ?></p>
+          <!-- <a class="no-underline" href="<?php echo get_permalink($event->ID); ?>"><button>Read More</button></a> -->
+        </article>
+      </div>
+    <?php endforeach ?>
+  </div>
 </section>
 
 
