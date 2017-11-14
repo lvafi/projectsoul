@@ -14,12 +14,7 @@
 #the-about-page.we-story-tell {
   position: absolute;
 }
-.image-about-shift-left {
-  position: absolute;
-  right: 50px;
-  z-index: 999;
-  
-}
+
 
 .style-black-dots-about {
   position: absolute; 

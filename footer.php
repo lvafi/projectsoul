@@ -23,11 +23,14 @@
 		</section> -->
 
 		<section class="theme-dark" id="contact-form">
-		   <div class="controller">
-				 <button class="first-button">1. EVENT DETAILS</button> 
-				 <button class="second-button">2</button>
-				</div>
-		   <?php echo do_shortcode( '[contact-form-7 id="86" title="Contact form 1"]' );  ?>
+			<div class="l-container">
+				<div class="controller">
+						<a href="javascript:void(0)" class="close-contact-form">&times;</a>
+						<button class="first-button">1. EVENT DETAILS</button> 
+						<button class="second-button">2</button>
+					</div>
+				<?php echo do_shortcode( '[contact-form-7 id="86" title="Contact form 1"]' );  ?>
+			</div>
 		</section>
 		
 		<section class="theme-dark">

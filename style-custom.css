@@ -189,6 +189,7 @@
     font-size: 60px;
 }
 
+
 #primary-menu  {
   display: block;
 }
@@ -215,6 +216,14 @@
 .close-btn {width: 80px;background-color: #fdee00}
 .open-btn {width: 240px;background-color: white;}
 
+.close-contact-form {
+  font-size: 100px;
+  color:#818181;
+  width: 80vw;
+  display: flex;flex-direction: row-reverse;
+  font-weight: 100;
+}
+#contact-form .l-container {padding-top: 0px; margin-top: -30px;}
 
 
 
@@ -430,15 +439,7 @@ top:1730px;}
   margin-bottom: 100px;
 
 }
-/* .the-yellow-rectangle{
-  position: absolute;
-  height: 100px;
-  width: 100%;
-  background-color: #fdee00;
-  top: -40px;
-  opacity: 0.7;
-  z-index: 900;
-} */
+
 .yellow-small-box{
   position: absolute;
   height: 20px;
@@ -458,14 +459,7 @@ top:1730px;}
 }
 
 #intro{position: relative}
-/* #intro .the-yellow-rectangle{
- position: absolute;
-  height: 200px;
-  width: 70%;
-  background-color: #fdee00;
-  top: 390px;
-  opacity: 0.7; 
-} */
+
 
 
 
@@ -770,7 +764,7 @@ margin: 0 !important;
   .image-about-shift-left{left: -35px;}
   .c {margin-top: 30px;}
   .our-team{position: relative;top:-10px;left: 90px;}
-
+  .header-image-desktop {display: none;}
     
 }
 
@@ -840,6 +834,13 @@ margin: 0 !important;
     opacity: 0.7;
     left:-170px;
 }
+  #the-about-page .the-yellow-rectangle{
+    top: -1300px;
+    position: relative;
+    left: -180px;
+    height: 500px;
+  }
+  .the-yellow-rectangle-backof-image{position: absolute;top:1000px;}
 
 
   a.learn-more-desktop:link{    position: relative;
@@ -1004,6 +1005,21 @@ margin: 0 !important;
   }
   .swiper-container{display: block;}
   .our-style-slick-slider{display: none;}
+  /* About */
+  #the-about-page > h1 > p {
+    font-size: 55px;
+    position: relative;
+    top:-650px;
+  }
+  .header-image-desktop {display: block;}
+  .image-about-shift-left {
+  position: absolute;
+  left: -400px;
+  z-index: 999;
+  
+}
+
+
 
   /* Services */
   
@@ -1060,7 +1076,7 @@ margin: 0 !important;
 
 
 }
-
+/*end of desktop media query*/
 video {max-width: 100%;}
 
 /*animated header*/

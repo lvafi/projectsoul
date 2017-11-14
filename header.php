@@ -49,10 +49,13 @@
 					<object id="svg" type="image/svg+xml" data="<?php echo get_stylesheet_directory_uri(); ?>/image/nav.svg">Your browser does not support SVGs</object>
 			</div>
 
-			<div class="header-image-desktop">
-			    <?php $about_page = get_page_by_title( 'about us');?>
-					<img src="<?php the_field('about-image',$about_page); ?>"/>
-			</div>
+			<?php if (is_page(array('about us','contact', 'events', 'services'))) : ?>
+					<div class="header-image-desktop">
+							<?php $about_page = get_page_by_title( 'about us');?>
+							<img src="<?php the_field('about-image',$about_page); ?>"/>
+					</div>
+			<?php endif; ?>
+
 				
 			<div class="header-container">
 					<?php $about_page = get_page_by_title( 'about us');?>

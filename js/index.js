@@ -263,6 +263,10 @@ jQuery(document).ready(function($) {
       e.preventDefault();
       $('#contact-form').addClass('state-active');
     })  
+    $('.close-contact-form').on('click',function(e){
+      e.preventDefault();
+      $('#contact-form').removeClass('state-active');
+    })
   
   }); // end document ready
   
