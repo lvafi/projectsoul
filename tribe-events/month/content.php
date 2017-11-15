@@ -16,8 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="tribe-events-content" class="tribe-events-month">
    <div class="calendar-title">
-	 		<h1>schedule and events</h1>
-   </div>
+			 <h1>SCHEDULE</h1>
+			 <h1>AND</h1>
+			 <h1>EVENTS</h1>
+			 <div class="transparent-yellow-square"></div>
+	 </div>
+
 	<!-- Month Title -->
 	<?php do_action( 'tribe_events_before_the_title' ) ?>
 	<h2 class="tribe-events-page-title"><?php tribe_events_title() ?></h2>
